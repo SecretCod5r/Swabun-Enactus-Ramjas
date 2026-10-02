@@ -1,0 +1,103 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-warm: #FAF8F5;
+    --text-primary: #141413;
+    --enactus-yellow: #FDB813;
+    --enactus-black: #0F0F0E;
+  }
+
+  body {
+    background-color: #FAF8F5;
+    color: #141413;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, .font-serif-display {
+    font-family: 'Playfair Display', Georgia, serif;
+    letter-spacing: -0.02em;
+  }
+
+  .font-display-italic {
+    font-family: 'Instrument Serif', Georgia, serif;
+    font-style: italic;
+  }
+}
+
+/* Custom editorial typography utility classes */
+.serif-headline {
+  font-family: 'Playfair Display', Georgia, serif;
+  letter-spacing: -0.025em;
+  line-height: 0.95;
+}
+
+.editorial-italic {
+  font-family: 'Instrument Serif', Georgia, serif;
+  font-style: italic;
+  letter-spacing: -0.01em;
+}
+
+/* Subtle architectural paper texture overlay */
+.paper-texture {
+  background-image: radial-gradient(rgba(20, 20, 19, 0.04) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+/* Subtle hairline divider */
+.hairline-b {
+  border-bottom: 1px solid rgba(20, 20, 19, 0.08);
+}
+
+.hairline-t {
+  border-top: 1px solid rgba(20, 20, 19, 0.08);
+}
+
+.hairline-all {
+  border: 1px solid rgba(20, 20, 19, 0.09);
+}
+
+/* Custom smooth scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FAF8F5;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #D4CEBE;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #B5AC97;
+}
+
+/* Marquee keyframe animation */
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  display: flex;
+  width: 200%;
+  animation: marquee 28s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Subtle float animation */
+@keyframes subtle-float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-8px) rotate(1deg); }
+}
+
+.animate-float-slow {
+  animation: subtle-float 6s ease-in-out infinite;
+}
